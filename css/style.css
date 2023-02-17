@@ -41,7 +41,7 @@ main {
     height: 110%;
     z-index: 1;
     position: absolute;
-    left: -20%;
+    left: -35%;
     top: -5%;
 }
 
@@ -65,14 +65,15 @@ main {
     height: 80%;
 }
 
-/****************************** Equipamentos *****/
+
+/******** EQUIPAMENTOS ********/
 
 .equipamentos {
     flex-basis: 32%;
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
 }
 
 .montador-conteudo {
@@ -148,9 +149,11 @@ main {
     color: var(--main-branco)
 }
 
+/******** EQUIPAMENTOS ********/
 
 
-/****************************** Estatísticas *****/
+/******** ESTATÍSTICAS ********/
+
 .estatisticas {
     flex-basis: 23%;
     padding: 2em 2em 0;
@@ -208,6 +211,58 @@ main {
     flex-basis: 35%;
     margin: 10px 0 0;
 }
+
+/******** ESTATÍSTICAS ********/
+
+
+/******** CORES ROBOTRON ********/
+
+.controle-robo {
+    border-radius: 25px;
+    float: right;
+    display: inline-flex;
+    padding-right: 25px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.button-robo {
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .button-robo:hover {
+    transform: rotate(360deg);
+  }
+  
+.img-robo {
+    width: 60px;
+    height: 60px;
+}
+
+.cor-robo {
+    flex-basis: 32%;
+    padding: 2em 2em 0;
+}
+
+.cor-robo-conteudo {
+    padding: 2em 10%;
+    width: 85%;
+    margin-left: 3.5em;
+}
+
+.cor-robo-linha {
+    padding: 0.4em 0;
+}
+
+.cor-robo-titulo {
+    color: #FFFFFF;
+    font-size: 1.7em;
+    flex-basis: 40%;
+    text-transform: uppercase;
+    order: 1;
+}
+
+/******** CORES ROBOTRON ********/
 
 @media screen and (max-width: 1600px) {
     body { 

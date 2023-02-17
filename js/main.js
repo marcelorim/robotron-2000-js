@@ -1,5 +1,6 @@
 const controle = document.querySelectorAll("[data-controle]")
 const estatisticas = document.querySelectorAll("[data-estatistica]")
+const listaCoresRobos = document.querySelectorAll("[data-cor-robo]")
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -32,6 +33,26 @@ const pecas = {
         "velocidade": -2
     }
 }
+const coresRobo = {
+    "amarelo": {
+        "caminho": 'img/Amarelo/Robotron 2000 - Amarelo.png'
+    },
+    "azul": {
+        "caminho": "img/Azul/Robotron 2000 - Azul.png"
+    },
+    "branco":{
+        "caminho": "img/Branco/Robotron 2000 - Branco.png"
+    },
+    "preto":{
+        "caminho": "img/Preto/Robotron 2000 - Preto.png"
+    },
+    "rosa":{
+        "caminho": "img/Rosa/Robotron 2000 - Rosa.png"
+    },
+    "vermelho":{
+        "caminho": "img/Vermelho/Robotron 2000 - Vermelho.png"
+    }
+}
 
 controle.forEach( (elemento) => {
     elemento.addEventListener('click', (evento) => {
@@ -56,3 +77,13 @@ function atualizaEstatisticas(peca) {
     })
 }
 
+function alterarCorRobotron(caminhoNovaImagem){
+    document.querySelector("#imgRobo").src = caminhoNovaImagem;
+}
+
+listaCoresRobos.forEach( (elemento) => {
+    elemento.addEventListener('click', (evento) => {
+        let caminhoNovaCorRobo = coresRobo[evento.target.dataset.corRobo].caminho
+        alterarCorRobotron(caminhoNovaCorRobo);
+    })
+})
